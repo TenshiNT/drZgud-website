@@ -9,5 +9,6 @@ if (size == false) {
 
   const titleStrap = document.getElementsByClassName('titleLine');
   titleStrap.style.innerWidth = '100%';
+  titleStrap.style.innerHeight = '1000px'
     
 }

@@ -6,158 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=1280, initial-scale=1">
     <title>Tadeusz Zgud</title>
-    <style>
-      body {
-        background-image: url("background.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-      }
-      .parent {
-        position: relative;
-        top: 0;
-        left: 0;
-      }
-      .strap {
-        position: absolute;
-        top: 305px;
-        left: 0;
-      }
-      .profile {
-        position: absolute;
-        top: 25px;
-        left: 5px;
-        display: block;
-        margin-left: 2%;
-        margin-top: 16%;
-        border-radius: 50%;
-        float: left;
-      }
-      .titleLine {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin-top: 0px;
-      }
-      .planeIcon {
-        position: absolute;
-        top: 5px;
-        left: 650px;
-      }
-      .name {
-        position: absolute;
-        top: 120px;
-        left: 750px;
-        font-size: 45px;
-        font-family: 'Times New Roman', Times, serif;
-      }
-      .phoneNum {
-        position: absolute;
-        top: 259px;
-        left: 450px;
-        font-size: 46px;
-        font-weight: 540;
-        font-family: Verdana;
-        padding: 25px;
-        border-bottom: 2px solid rgb(233, 226, 218);
-      }
-      .num {
-        position: absolute;
-        font-size: 47px;
-        top: 258px;
-        left: 1265px;
-        font-weight: bold;
-        padding: 26px;
-        border-bottom: 2px solid rgb(233, 226, 218);;
-      }
-      .underName{
-        position: absolute;
-        top: 140px;
-        left: 700px;
-        height: 100px;
-        width: 550px;
-        border: 2px solid rgb(233, 226, 218);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-      .location {
-        position: absolute;
-        top: 365px;
-        left: 450px;
-        font-size: 46px;
-        font-weight: 540;
-        font-family: Verdana;
-        padding: 25px;
-        border-bottom: 2px solid rgb(233, 226, 218);
-      }
-      .info {
-        position: absolute;
-        top: 474px;
-        left: 450px;
-        font-size: 47px;
-        font-weight: 540;
-        font-family: Verdana;
-        padding: 38px;
-        border-bottom: 2px solid rgb(233, 226, 218);
-      }
-      .headerbadania {
-        font-size: 45px;
-        font-weight: bold;
-        font-family: sans-serif;
-        text-align: center;
-        position: absolute;
-        top: 11px;
-        left: 38%;
-      }
-      .test {
-        position: absolute;
-        top: 400px;
-        left: 800px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <script src="detecting_device.js"></script>
     <div class="parent">
-      <img
+      <img id="whiteStrap"
         src="white.jpg"
         alt="strap"
         style="width: 100%"
         height="350"
         class="strap"
       />
-      <img
+      <img id="profilePicture"
         src="tadeusz.jpg"
         alt="face picture"
         style="width: 300px; height: 300px"
         class="profile"
       />
       <div>
-        <img src="white.jpg" alt="underName" class="underName">
-        <p class="name"><a href="https://www.facebook.com/tadeusz.zgud.35" target="_blank">Dr n. med. Tadeusz Zgud</a></p>
+        <img id="undername" src="white.jpg" alt="underName" class="underName">
+        <p id="name" class="name"><a href="https://www.facebook.com/tadeusz.zgud.35" target="_blank">Dr n. med. Tadeusz Zgud</a></p>
       </div>
       <p id="phoneNum" class="phoneNum" >Umów się na wizytę telefonicznie</p>
-      <p class="num" onclick="copy(this)" id="phoneNum">601 425 263</p>
-      <p class="location">Gabinet nr. 201a przy <a href="https://www.google.pl/maps/place/Pr%C4%85dnicka+10,+30-002+Krak%C3%B3w/@50.0756262,19.9337125,17z/data=!3m1!4b1!4m5!3m4!1s0x47165b0053a16887:0x4927529304b0b6a1!8m2!3d50.0756228!4d19.9359012" target="_blank">ul. Prądnickiej 10 w Krakowie</a></p>
-      <p class="info">Szczegóły wizyt uzgadniane są telefonicznie</p>
+      <p class="num" onclick="copy(this)" id="num">601 425 263</p>
+      <p id="location" class="location">Gabinet nr. 201a przy <a href="https://www.google.pl/maps/place/Pr%C4%85dnicka+10,+30-002+Krak%C3%B3w/@50.0756262,19.9337125,17z/data=!3m1!4b1!4m5!3m4!1s0x47165b0053a16887:0x4927529304b0b6a1!8m2!3d50.0756228!4d19.9359012" target="_blank">ul. Prądnickiej 10 w Krakowie</a></p>
+      <p id="info" class="info">Szczegóły wizyt uzgadniane są telefonicznie</p>
     </div>
     <div class="titleLine">
-      <img
+      <img id="titleStrap"
         src="white.jpg"
         alt="title"
         style="width: 100%"
         height="70"
         class="title"
       />
-      <header class="headerbadania">Badania lotniczo-lekarskie</header>
+      <header id="headerBadania" class="headerbadania">Badania lotniczo-lekarskie</header>
       <div class="planeIcon">
-        <img src="plane.jpg" alt="icon" width="60" height="60" />
+        <img id="plane" src="plane.jpg" alt="icon" width="60" height="60" />
       </div>
     </div>
-    <script>
-      var siteWidth = 1280;
-      var scale = screen.width /siteWidth;
-      
-      document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
-    </script>
+    <div class="add">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5467390720305154"
+      crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+      style="display:inline-block;width:728px;height:90px"
+      data-ad-client="ca-pub-1234567890123456"
+      data-ad-slot="1234567890"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    
   </body>
 </html>

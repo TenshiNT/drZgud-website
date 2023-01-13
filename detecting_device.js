@@ -5,5 +5,8 @@ function detectMob() {
 
 if (size == false) {
   document.getElementById('stylesheet').href='styleMobile.css';
-    
+  console.log('Device type: mobile')
+}
+else {
+  console.log('Device type: desktop')
 }

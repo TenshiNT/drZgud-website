@@ -9,13 +9,17 @@
     <link id="stylesheet" rel="stylesheet" href="style.css">
   </head>
   <body>
-    <script src="detecting_device.js"></script>
+    <div>
+      <img id="undername" src="white.jpg" alt="underName" class="underName">
+      <p id="name" class="name"><a href="https://www.facebook.com/tadeusz.zgud.35" target="_blank">Dr n. med. Tadeusz Zgud</a></p>
+    </div>
     <div class="parent">
       <img
+        id="strap"
         src="white.jpg"
         alt="strap"
         style="width: 100%"
-        height="350"
+        height="350px"
         class="strap"
       />
       <img id="profilePicture"
@@ -24,10 +28,6 @@
         style="width: 300px; height: 300px"
         class="profile"
       />
-      <div>
-        <img id="undername" src="white.jpg" alt="underName" class="underName">
-        <p id="name" class="name"><a href="https://www.facebook.com/tadeusz.zgud.35" target="_blank">Dr n. med. Tadeusz Zgud</a></p>
-      </div>
       <p id="phoneNum" class="phoneNum" >Umów się na wizytę telefonicznie</p>
       <p class="num" onclick="copy(this)" id="num">601 425 263</p>
       <p id="location" class="location">Gabinet nr. 201a przy <a href="https://www.google.pl/maps/place/Pr%C4%85dnicka+10,+30-002+Krak%C3%B3w/@50.0756262,19.9337125,17z/data=!3m1!4b1!4m5!3m4!1s0x47165b0053a16887:0x4927529304b0b6a1!8m2!3d50.0756228!4d19.9359012" target="_blank">ul. Prądnickiej 10 w Krakowie</a></p>
@@ -46,10 +46,10 @@
         <img id="plane" src="plane.jpg" alt="icon" width="60" height="60" />
       </div>
     </div>
-    <div class="ad">
+    <div class="add">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5467390720305154"
       crossorigin="anonymous"></script>
     </div>
-    
+    <script src="detecting_device.js"></script>
   </body>
 </html>

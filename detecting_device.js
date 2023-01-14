@@ -54,4 +54,9 @@ if( isMobile.any() ) {
 
   const num = document.getElementById('num');
   num.style.fontSize = '41px';
+
+  var meta = document.createElement('meta');
+  meta.httpEquiv = "X-UA-Compatible";
+  meta.content = "name=viewport", "content=width=1000";
+  document.getElementsByTagName('head')[0].appendChild(meta);
 }
